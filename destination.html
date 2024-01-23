@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/destination.css">
+  <script src="js/script.js" defer></script>
+  <script src="js/destination.js" defer></script>
+  <title>Frontend Mentor | Space tourism website</title>
+</head>
+<body>
+  <div class="mobile-navbar" data-status="inactive" id="mobile-navbar">
+    <ul class="">
+      <li class="list-item"><a class="link" href="./index.html?page=home" data-menu-status="active" data-nav-id="home"><span class="bold">00</span> Home</a></li>
+      <li class="list-item"><a class="link" href="./destination.html?page=destination" data-menu-status="inactive" data-nav-id="destination"><span class="bold">01</span> Destination</a></li>
+      <li class="list-item"><a class="link" href="./crew.html?page=crew" data-menu-status="inactive" data-nav-id="crew"><span class="bold">02</span> Crew</a></li>
+      <li class="list-item"><a class="link" href="./technology.html?page=technology" data-menu-status="inactive" data-nav-id="technology"><span class="bold">03</span> Technology</a></li>
+    </ul>
+  </div>
+  <nav>
+    <img src="assets/shared/logo.svg" alt="">
+    <div class="line"></div>
+    <div class="list">
+      <ul class="">
+        <li class="list-item"><a class="link" href="./index.html?page=home" data-menu-status="active" data-nav-id="home"><span class="bold">00</span> Home</a></li>
+        <li class="list-item"><a class="link" href="./destination.html?page=destination" data-menu-status="inactive" data-nav-id="destination"><span class="bold">01</span> Destination</a></li>
+        <li class="list-item"><a class="link" href="./crew.html?page=crew" data-menu-status="inactive" data-nav-id="crew"><span class="bold">02</span> Crew</a></li>
+        <li class="list-item"><a class="link" href="./technology.html?page=technology" data-menu-status="inactive" data-nav-id="technology"><span class="bold">03</span> Technology</a></li>
+      </ul>
+      <img src="assets/shared/icon-hamburger.svg" alt="" class="dropdown-button" id="dropdown-button">
+    </div>
+  </nav>
+  <div class="content">
+    <h2 class="title-left"><span>01</span> Pick your destination</h2>
+    <div class="content-div">
+      <div class="left-content">
+        <div>
+          <img src="assets/destination/image-moon.png" alt="" class="planet-img" id="planet-img">
+        </div>
+      </div>
+      <div class="right-content">
+        <div class="row">
+          <ul>
+              <li class="option" data-option="selected" id="Moon">Moon</li>
+              <li class="option" data-option="unselected" id="Mars">Mars</li>
+              <li class="option" data-option="unselected" id="Europa">Europa</li>
+              <li class="option" data-option="unselected" id="Titan">Titan</li>
+          </ul>
+        </div>
+        <span class="title" id="title">Moon</span>
+        <p class="description" id="description">See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.</p>
+  
+        <div class="line"></div>
+  
+        <div class="row">
+          <div class="column">
+              <span class="subtitle">AVG. Distance</span>
+              <span class="sub-info" id="distance">384,400 km</span>
+          </div>
+          <div class="column">
+              <span class="subtitle">Est. travel time</span>
+              <span class="sub-info" id="estimatedTravel">3 days</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+
+
+</body>
+</html>

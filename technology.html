@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/technology.css">
+  <script src="js/script.js" defer></script>
+  <script src="js/technology.js" defer></script>
+  
+  <title>Frontend Mentor | Space tourism website</title>
+</head>
+<body>
+
+    <div class="mobile-navbar" data-status="inactive" id="mobile-navbar">
+        <ul class="">
+            <li class="list-item"><a class="link" href="./index.html?page=home" data-menu-status="active" data-nav-id="home"><span class="bold">00</span> Home</a></li>
+            <li class="list-item"><a class="link" href="./destination.html?page=destination" data-menu-status="inactive" data-nav-id="destination"><span class="bold">01</span> Destination</a></li>
+            <li class="list-item"><a class="link" href="./crew.html?page=crew" data-menu-status="inactive" data-nav-id="crew"><span class="bold">02</span> Crew</a></li>
+            <li class="list-item"><a class="link" href="./technology.html?page=technology" data-menu-status="inactive" data-nav-id="technology"><span class="bold">03</span> Technology</a></li>
+        </ul>
+    </div>
+    <nav>
+        <img src="assets/shared/logo.svg" alt="">
+        <div class="line"></div>
+        <div class="list">
+            <ul class="">
+                <li class="list-item"><a class="link" href="./index.html?page=home" data-menu-status="active" data-nav-id="home"><span class="bold">00</span> Home</a></li>
+                <li class="list-item"><a class="link" href="./destination.html?page=destination" data-menu-status="inactive" data-nav-id="destination"><span class="bold">01</span> Destination</a></li>
+                <li class="list-item"><a class="link" href="./crew.html?page=crew" data-menu-status="inactive" data-nav-id="crew"><span class="bold">02</span> Crew</a></li>
+                <li class="list-item"><a class="link" href="./technology.html?page=technology" data-menu-status="inactive" data-nav-id="technology"><span class="bold">03</span> Technology</a></li>
+            </ul>
+            <img src="assets/shared/icon-hamburger.svg" alt="" class="dropdown-button" id="dropdown-button">
+        </div>
+    </nav>
+    <div class="content">
+        <h2 class="title-left"><span>03 </span> Space launch 101</h2>
+        <div class="content-div">
+            <div class="left-content">
+                <div class="sections">
+                    <span class="option" data-active="true" data-option="1">1</span>
+                    <span class="option" data-active="false" data-option="2">2</span>
+                    <span class="option" data-active="false" data-option="3">3</span>
+                </div>
+                <div class="info">
+                    <p class="subtitle" id="subtitle">The terminology...</p>
+                    <p class="title" id="title">Launch vehicle</p>
+                    <p class="description" id="description">A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a 
+                        payload from Earth's surface to space, usually to Earth orbit or beyond. Our 
+                        WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, 
+                        it's quite an awe-inspiring sight on the launch pad!</p>
+                </div>
+            </div>
+            <div class="right-content">
+                <img src="assets/technology/image-launch-vehicle-portrait.jpg" alt="" id="crew-member-img">
+            </div>
+        </div>
+    </div>
+
+  <!-- Pilot
+  Victor Glover
+
+  Pilot on the first operational flight of the SpaceX Crew Dragon to the 
+  International Space Station. Glover is a commander in the U.S. Navy where 
+  he pilots an F/A-18.He was a crew member of Expedition 64, and served as a 
+  station systems flight engineer.  -->
+</body>
+</html>

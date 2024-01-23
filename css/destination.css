@@ -1,0 +1,245 @@
+body{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    background-image: url('../assets/destination/background-destination-desktop.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.content{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+/* left content */
+.left-content{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: start;
+}
+
+.title-left, .title-left > span{
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    margin-bottom: 2rem;
+}
+.title-left > span{
+    color: var(--primary-gray);
+    font-weight: bolder;
+}
+
+.title-left{
+    width: 70%;
+    margin-top: 3rem;
+}
+
+.content-div{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-right: 10%;
+}
+
+.planet-img{
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.left-content div{
+    text-align: center;
+    margin: 2rem;
+    width: 65%;
+}
+
+/* left content */
+
+/* right content */
+.right-content .row ul{
+    display: flex;
+    gap: 2rem;
+}
+.right-content .row ul li{
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-bottom: 2rem;
+}
+.right-content .row ul li[data-option="selected"]{
+    border-bottom: 4px solid white;
+    padding: 2rem 0 calc(2rem - 4px) 0;
+}
+
+.right-content span.title{
+    font-size: 110px;
+    text-transform: uppercase;
+    margin: 2rem 0;
+}
+
+.right-content p.description{
+    margin-top: 0;
+    font-size: 24px;
+    line-height: 2rem;
+    color: var(--primary-white-text);
+}
+
+.right-content .line{
+    width: 100%;
+    margin: 2rem 0;
+    transform: translate(0,0);
+}
+
+.right-content .row{
+    display: flex;
+    justify-content: space-between;
+}
+.right-content .row .column{
+    display: flex;
+    flex-direction: column;
+}
+.right-content .subtitle{
+    font-size: 21px;
+    color: rgb(138, 139, 139);
+    margin: 1rem 0;
+    text-transform: uppercase;
+}
+.right-content .sub-info{
+    font-size: 34px;
+    text-transform: uppercase;
+}
+/* right content */
+
+@media (width<880px) {
+    body{
+        background-image: url('../assets/destination/background-destination-tablet.jpg');
+    }
+    .right-content div {
+        height: 200px;
+        width: 200px;
+    }
+    .content{
+        display: block;
+    }
+    .line{
+        display: none;
+    }
+    .bold{
+        display: none;
+    }
+    .text-style-2{
+        font-size: 110px;
+    }
+    .left-content div{
+        width: 300px;
+    }
+
+
+
+
+    .content-div {
+        margin: 0 3rem;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+    .title-left{
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+    .right-content div{
+        height: auto;
+        width: auto;
+    }
+    .right-content .row ul li{
+        margin-bottom: 0;
+    }
+}
+
+@media (width<530px){
+    body{
+        background-image:url('../assets/destination/background-destination-mobile.jpg');
+    }    
+    .content{
+        flex-direction: column;
+        justify-content: start;
+        margin-top: 2rem;
+        gap: 6rem;
+    }
+
+    .left-content div{
+        text-align: center;
+        width: 280px;
+    }
+    .text-style-1{
+        font-size: 18px;
+        width: 100%;
+    }
+
+    .left-content{
+        height: auto;
+    }
+
+
+
+
+    .content-div {
+        margin: 0 1rem;
+    }
+    .title-left{
+        width: 100%;
+        margin: 0;
+    }
+    .right-content .row {
+        display: flex;
+        justify-content: center;
+    }
+    .right-content .row ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        place-content: center;
+        gap: 1rem;
+    }
+    .right-content span.title {
+        font-size: 55px;
+        text-transform: uppercase;
+    }
+    .right-content p.description {
+        margin: 0;
+        font-size: 16px;
+    }
+    .right-content .row:last-child{
+        justify-content: space-between;
+    }
+    .right-content .subtitle {
+        font-size: 16px;
+    }
+    .right-content .sub-info {
+        font-size: 16px;
+    }
+
+    .right-content .row ul{
+        margin: 1rem 0;
+    }
+
+    .right-content .row ul li[data-option="selected"]{
+        padding: 1rem 0 calc(1rem - 4px) 0;
+    }
+
+    .right-content .row ul li {
+        padding: 1rem 0 1rem 0;
+    }
+}

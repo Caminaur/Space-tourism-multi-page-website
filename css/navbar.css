@@ -1,0 +1,158 @@
+:root{
+    --font-size:16px;
+    --primary-gray:rgb(110, 110, 110);
+    --primary-white-text:rgb(221, 221, 221);
+    --primary-font:'Courier New', Courier, monospace;
+    --font-two:"Jost", sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: var(--font-size);
+}
+
+html{
+    overflow: hidden;
+}
+
+ul{
+    list-style: none;
+}
+
+.bold{
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+nav{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: auto 1fr 1.5fr;
+    gap: 1rem;
+    padding: 2rem 0 2rem 3rem;
+}
+
+.list{
+    background: rgba(255,255,255, 0.1);
+    backdrop-filter: blur(8px);
+    z-index: 4;
+}
+
+.list ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    list-style: none;
+    height: 100%;
+    padding: 0 4rem 0 5rem;
+}
+
+ul li{
+    text-wrap: nowrap;
+    cursor: pointer;
+    padding: 2rem 0 2rem 0;
+}
+
+ul li a{
+    text-decoration: none;
+    font-family: var(--primary-font);
+    text-transform: uppercase;
+    color: white;
+    font-weight: lighter;
+    letter-spacing: 2px;
+}
+
+.line{
+    border-bottom: 2px solid var(--primary-gray) ;
+    transform: translate(15%,-50%);
+    z-index: 5;
+}
+
+.list-item a:hover,
+.list-item a[data-menu-status="active"]{
+    border-bottom: 2px solid white;
+    padding: 2rem 0 calc(2rem - 2px) 0;
+}
+
+
+
+.dropdown-button{
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-navbar{
+    position: absolute;
+    height: 100vh;
+    width: 60%;
+    right: 0;
+    background: rgba(255,255,255, 0.1);
+    backdrop-filter: blur(7px) opacity(1);
+    padding: 1rem;
+    transition: translate 500ms ease;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.mobile-navbar[data-status="active"]{
+    translate: 0%;
+}
+.mobile-navbar[data-status="inactive"]{
+    translate: 100%;
+}
+
+.mobile-navbar ul{
+    list-style: none;
+}
+
+
+
+@media (width<880px) {
+    nav .list ul{
+        gap: 1rem;
+        padding: 0 2rem 0 2rem;
+        display: none;
+    }
+    .line{
+        display: none;
+    }
+    .bold{
+        display: none;
+    }
+    nav{
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        align-self: center;
+    }
+    .list{
+        background: transparent;
+    }
+
+    .dropdown-button{
+        display: block;
+    }
+
+    nav img:first-child{
+        height: 60px;
+    }
+    nav img:last-child{
+        height: 40px;
+    }
+}
+
+@media (width<530px){
+    nav{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-self: center;
+        padding: 1rem;
+    }
+}
